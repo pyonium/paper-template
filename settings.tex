@@ -1,0 +1,56 @@
+\documentclass{report}
+
+%math font
+\usepackage{euler}
+
+%set document margin
+\usepackage[a4paper, top=1in, bottom=1in, left=1.2in, right=1.2in, includefoot, footskip=.5in]{geometry}
+
+\usepackage[english]{babel}
+
+%font-related stuff
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{xunicode}
+
+%we're going to need images
+\usepackage{graphicx}
+
+%set the default font
+\setmainfont[ExternalLocation=fonts/]{Ubuntu-R}%
+  [Ligatures=TeX,
+  BoldFont=Ubuntu-B,
+  ItalicFont=Ubuntu-RI,
+  BoldItalicFont=Ubuntu-BI]
+  
+\setmonofont[ExternalLocation=fonts/]{UbuntuMono-R}
+  [BoldFont=UbuntuMono-B,
+  ItalicFont=UbuntuMono-RI,
+  BoldItalicFont=UbuntuMono-BI]
+
+%fix monospace font
+\usepackage{listings}
+\lstset{columns=fixed, basicstyle=\ttfamily, basewidth=0.5em}
+  
+%set sec font
+\newfontfamily\secfont[ExternalLocation=fonts/]{Ubuntu-C}
+
+\newfontfamily\regfont[ExternalLocation=fonts/]{Ubuntu-L}
+
+
+%make paragraphs nice
+\usepackage[parfill]{parskip}
+
+%title formats
+\usepackage{titlesec}
+
+\titleformat*{\section}{\secfont\LARGE}
+\titleformat*{\subsection}{\secfont\itshape\Large}
+\titleformat{\chapter}[display]{\secfont}{\raggedleft\fontsize{60pt}{60pt}\secfont\selectfont\thechapter}{0em}{\raggedleft\fontsize{30pt}{20pt}\secfont\selectfont}
+
+%decrease top spacing of new chapter
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
+
+%table stuff
+\usepackage{tabularx}
+
